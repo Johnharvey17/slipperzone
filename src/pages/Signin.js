@@ -19,7 +19,7 @@ export default function Signin() {
     }
     const messageInitialState={
         text:"",
-        severity:"",
+        severity:"success",
     };
     const [state, setState]= useState (initialState); 
     const [open, setOpen]= useState(false);
@@ -65,33 +65,33 @@ export default function Signin() {
 
   return (
     <Box 
-    sx={{width: '200vh', height:'80vh',
-    display:'flex', flexDirection: 'column',
-    justifyContent:'center',
-    alignItems:'center'}}>
-        <Typography variant='h4' fontColor='' fontFamily='Arial'>Please Sign In</Typography>
+    sx={{width: "200vh", height:"80vh",
+    display:"flex", flexDirection: "column",
+    justifyContent:"center",
+    alignItems:"center"}}>
+        <Typography variant="h4"  fontFamily="Arial">Please Sign In</Typography>
         <Paper elevation={3}
-        sx={{padding: '24px', display:'flex', 
-        flexDirection:'column',marginTop: '12px',
-        alignItems: 'center'
+        sx={{padding: "24px", display:"flex", 
+        flexDirection:"column",marginTop: "12px",
+        alignItems: "center"
         }}>
             <TextField 
             label="Email Address" 
             name="email" 
             type="email"  
-            sx={{marginTop: '12px'}}
+            sx={{marginTop: "12px"}}
             onChange={handleChange("email")}/>
 
             <TextField 
             label="Password" 
             name="password" 
             type="password" 
-            sx={{marginTop: '12px'}} 
+            sx={{marginTop: "12px"}} 
             onChange={handleChange("password")}/>
 
             <Button 
             variant="contained" 
-            sx={{marginTop:'12px'}}
+            sx={{marginTop:"12px"}}
             onClick={signIn}>
                 Sign In
             </Button>
@@ -101,7 +101,7 @@ export default function Signin() {
            justifyContent:'center', 
            marginTop:"9px"}}>
 
-               <Typography variant='subtitle2' 
+               <Typography variant="subtitle2" 
                onClick={gotoRegister}
                 sx={style.linkStyle}>
                Create new Account

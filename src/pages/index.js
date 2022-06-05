@@ -74,39 +74,39 @@ export default function Home() {
     display:'flex', flexDirection: 'column',
     justifyContent:'center',
     alignItems:'center'}}>
-        <Typography variant='h4' fontColor='' fontFamily='Arial'>Please Sign In</Typography>
+        <Typography variant="h4"  fontFamily="Arial">Please Sign In</Typography>
         <Paper elevation={3}
-        sx={{padding: '24px', display:'flex', 
-        flexDirection:'column',marginTop: '12px',
-        alignItems: 'center'
+        sx={{padding: "24px", display:"flex", 
+        flexDirection:"column",marginTop: "12px",
+        alignItems: "center"
         }}>
             <TextField 
             label="Email Address" 
             name="email" 
             type="email"  
-            sx={{marginTop: '12px'}}
+            sx={{marginTop: "12px"}}
             onChange={handleChange("email")}/>
 
             <TextField 
             label="Password" 
             name="password" 
             type="password" 
-            sx={{marginTop: '12px'}} 
+            sx={{marginTop: "12px"}} 
             onChange={handleChange("password")}/>
 
             <Button 
             variant="contained" 
-            sx={{marginTop:'12px'}}
+            sx={{marginTop:"12px"}}
             onClick={signIn}>
                 Sign In
             </Button>
            
            <Box 
-           sx={{diplay:'flex', 
-           justifyContent:'center', 
+           sx={{diplay:"flex", 
+           justifyContent:"center", 
            marginTop:"9px"}}>
 
-               <Typography variant='subtitle2' 
+               <Typography variant="subtitle2"
                onClick={gotoRegister}
                 sx={style.linkStyle}>
                Create new Account
