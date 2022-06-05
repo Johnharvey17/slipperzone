@@ -10,7 +10,7 @@ linkStyle: {
 },
 };
 
- function Signin() {
+export default function Signin() {
     const router = useRouter();
 
     const initialState = {
@@ -44,9 +44,11 @@ linkStyle: {
           setMessage({
               text:"Logged In Succesful",
               severity:"success",
+              
 
           });
           setOpen(true);
+          router.push("/HomePage");
         }
         else{
         setMessage({
@@ -122,4 +124,7 @@ linkStyle: {
         </Snackbar>
     </Box>
   )
-} export default Signin
+}  
+
+
+ 

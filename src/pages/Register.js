@@ -27,7 +27,8 @@ linkStyle: {
         }}>
             <TextField label="Email Address" type="email"  sx={{marginTop: '12px'}}/>
             <TextField label="Password" type="password" sx={{marginTop: '12px'}}/>
-            <Button variant="contained" sx={{marginTop:'12px'}}>Sign In</Button>
+            <TextField label="Confirm Password" type="password" sx={{marginTop: '12px'}}/>
+            <Button variant="contained" sx={{marginTop:'12px'}}>Register</Button>
            <Box sx={{diplay:'flex', justifyContent:'center', marginTop:"9px"}}>
                <Typography variant='subtitle2' onClick={gotoSignIn} sx={style.linkStyle}>
              Do you have account? Sign In

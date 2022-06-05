@@ -8,7 +8,7 @@ import {useRouter} from 'next/router'
 
 
 
-function Appbar() {
+function Appbar({children}) {
 
 const [open, setOpen] =useState(false);
 const router= useRouter();
@@ -18,12 +18,11 @@ const DrawerOpen = () =>{
 const handleClose =() =>{
     setOpen(false);
 };
-const gotoHome =() =>{
-router.push("/Home")
-}
-const gotoSignin =() =>{
-    router.push("/Signin")
-    }
+const gotoPage =(url) =>{
+    setOpen(false);
+    router.push(url);
+};
+
 
   return (
     <Box>
@@ -43,7 +42,7 @@ const gotoSignin =() =>{
          <Avatar 
              sx={{margin:'5px',
              marginTop: '10px',
-             marginLeft:'auto'}}>
+             marginLeft:'auto',}}>
                 SZ
          </Avatar>
         <Typography 
@@ -61,21 +60,20 @@ const gotoSignin =() =>{
     <Box sx={{minWidth: "200px", display:"flex", height:"100vh", flexDirection:"column"}}>
         <List sx={{ flexGrow:1}}>
         <ListItem button>
-                <ListItemIcon>
-                    <Image src="/assets/svg/home.svg" alt="bars" width={20} height={20}/>
-                </ListItemIcon> 
-            <ListItemText primary="Home"/>
+            <ListItemText primary="User"/>
         </ListItem>
         <Divider/>
              
-        <ListItem button  onClick={gotoHome}>
+        <ListItem button  onClick={() => gotoPage("/HomePage")}  
+        selected ={router.pathname.includes("HomePage")}>
                 <ListItemIcon>
                     <Image src="/assets/svg/home.svg" alt="bars" width={20} height={20}/>
                 </ListItemIcon> 
             <ListItemText primary="Home"/>
         </ListItem>
 
-        <ListItem button>
+        <ListItem button onClick={() => gotoPage("/Products")} 
+        selected ={router.pathname.includes("Products")}>
             <ListItemIcon>
                 <Image src="/assets/svg/home.svg" alt="bars" width={20} height={20}/>
             </ListItemIcon> 
@@ -85,7 +83,7 @@ const gotoSignin =() =>{
 
             <Divider/>
             <List>
-            <ListItem button onClick={gotoSignin}>
+            <ListItem button onClick={() => gotoPage("/Signin") }>
             <ListItemIcon>
                 <Image src="/assets/svg/signout.svg" alt="bars" width={20} height={20}/>
             </ListItemIcon> 
@@ -95,6 +93,9 @@ const gotoSignin =() =>{
 
     </Box>
 </Drawer>
+    <Box>
+        {children}
+    </Box>
 </Box>
   )
 }
