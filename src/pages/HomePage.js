@@ -7,7 +7,7 @@ export default function HomePage() {
 }
 
 HomePage.getLayout = function getLayout(page){
-return <UserLayout sx={{marginTop:"100px"}}>
+return <UserLayout>
   {page}
 </UserLayout> 
 }

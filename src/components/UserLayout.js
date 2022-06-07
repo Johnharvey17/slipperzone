@@ -6,9 +6,7 @@ import { Box } from '@mui/system'
 import {useState} from "react";
 import {useRouter} from 'next/router'
 
-
-
-function Appbar({children}) {
+function UserLayout({children}) {
 
 const [open, setOpen] =useState(false);
 const router= useRouter();
@@ -26,23 +24,25 @@ const gotoPage =(url) =>{
 
   return (
     <Box>
-  <AppBar position='s'  
-            sx={{padding:'0px', 
-            margin:'0px',
-            
+  <AppBar position="static"  
+            sx={{padding:"0px", 
+            margin:"0px",            
             height: "70px", 
-            display:'block',
-            border: '5px'}}>
+            display:"block",
+            border: "5px"}}>
     <Toolbar variant="dense">
-
         <IconButton onClick={DrawerOpen}>
-            <Image src="/assets/svg/bars.svg" alt="bars" width={20} height={20} marginTop={10} />
+            <Image src="/assets/svg/bars.svg" 
+            alt="bars" 
+            width="20px" 
+            height="20px" 
+             />
         </IconButton>
 
          <Avatar 
-             sx={{margin:'5px',
-             marginTop: '10px',
-             marginLeft:'auto',}}>
+             sx={{margin:"5px",
+             marginTop: "10px",
+             marginLeft:"auto"}}>
                 SZ
          </Avatar>
         <Typography 
@@ -67,7 +67,7 @@ const gotoPage =(url) =>{
         <ListItem button  onClick={() => gotoPage("/HomePage")}  
         selected ={router.pathname.includes("HomePage")}>
                 <ListItemIcon>
-                    <Image src="/assets/svg/home.svg" alt="bars" width={20} height={20}/>
+                    <Image src="/assets/svg/home.svg" alt="bars" width="20px" height="20px"/>
                 </ListItemIcon> 
             <ListItemText primary="Home"/>
         </ListItem>
@@ -75,7 +75,7 @@ const gotoPage =(url) =>{
         <ListItem button onClick={() => gotoPage("/Products")} 
         selected ={router.pathname.includes("Products")}>
             <ListItemIcon>
-                <Image src="/assets/svg/home.svg" alt="bars" width={20} height={20}/>
+                <Image src="/assets/svg/home.svg" alt="bars" width="20px" height="20px"/>
             </ListItemIcon> 
             <ListItemText primary="Products"/>
         </ListItem>
@@ -85,7 +85,7 @@ const gotoPage =(url) =>{
             <List>
             <ListItem button onClick={() => gotoPage("/Signin") }>
             <ListItemIcon>
-                <Image src="/assets/svg/signout.svg" alt="bars" width={20} height={20}/>
+                <Image src="/assets/svg/signout.svg" alt="bars" width="20px" height="20px" />
             </ListItemIcon> 
             <ListItemText primary="Sign out"/>
         </ListItem>
@@ -100,4 +100,4 @@ const gotoPage =(url) =>{
   )
 }
 
-export default Appbar
+export default UserLayout

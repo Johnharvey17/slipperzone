@@ -19,7 +19,7 @@ export default function Signin() {
     }
     const messageInitialState={
         text:"",
-        severity:"success",
+        severity:"error",
     };
     const [state, setState]= useState (initialState); 
     const [open, setOpen]= useState(false);
@@ -44,8 +44,6 @@ export default function Signin() {
           setMessage({
               text:"Logged In Succesful",
               severity:"success",
-              
-
           });
           setOpen(true);
           router.push("/HomePage");
@@ -97,8 +95,8 @@ export default function Signin() {
             </Button>
            
            <Box 
-           sx={{diplay:'flex', 
-           justifyContent:'center', 
+           sx={{diplay:"flex", 
+           justifyContent:"center", 
            marginTop:"9px"}}>
 
                <Typography variant="subtitle2" 
@@ -119,11 +117,11 @@ export default function Signin() {
            severity={message.severity}
            sx={{width: "100%"}}
            >
-               {message.text}
+         {message.text}
             </Alert> 
         </Snackbar>
     </Box>
-  )
+  );
 }  
 
 

@@ -22,7 +22,7 @@ linkStyle: {
     alignItems:"center"}}>
          <Typography variant="h4" fontFamily="Arial">Please Sign In</Typography>
         <Paper elevation={3}
-        sx={{padding: "4px", display:"flex", 
+        sx={{padding: "30px", display:"flex", 
         flexDirection:"column",marginTop: "12px"
         }}>
             <TextField label="Email Address" type="email"  sx={{marginTop: "12px"}}/>
