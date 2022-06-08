@@ -1,7 +1,7 @@
 import { Avatar, Box, Paper, Typography } from "@mui/material";
 import React from "react";
 
-export default function () {
+export default function Home3() {
   return (
     <Box sx={{marginTop:"50px", width:"%"}}>
       <Paper
