@@ -4,7 +4,7 @@ import UserLayout from "../components/UserLayout"
 export default function HomePage() {
   return (
     <div>HomePage
-      <Home3/>
+     
     </div>
     
   )

@@ -18,14 +18,14 @@ const style = {
   box1: {
     marginTop: "30px",
     marginLeft: "80px",
-    marginRight:"50px",
+    marginRight: "50px",
     display: "flex",
     flexDirection: "row",
   },
   box2: {
     marginTop: "20px",
     marginLeft: "80px",
-    marginRight:"50px",
+    marginRight: "50px",
     display: "flex",
     flexDirection: "row",
   },
@@ -38,7 +38,7 @@ const style = {
 
 export default function Products() {
   return (
-    <Box sx={{width:"100%",marginTop:"70px", height:"1500"}}>
+    <Box sx={{ width: "100%", marginTop: "70px", height: "1500" }}>
       <Typography variant="h2" sx={{ marginTop: "12px", textAlign: "center" }}>
         Products
       </Typography>
