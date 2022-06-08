@@ -18,7 +18,7 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 
-function UserLayout({ children }) {
+export default function UserLayout({ children }) {
   const [open, setOpen] = useState(false);
   const router = useRouter();
   const DrawerOpen = () => {
@@ -51,6 +51,7 @@ function UserLayout({ children }) {
               width="20px"
               height="20px"
             />
+            
           </IconButton>
 
           <Avatar sx={{ margin: "5px", marginTop: "15px", marginLeft: "auto" }}>
@@ -106,7 +107,7 @@ function UserLayout({ children }) {
             >
               <ListItemIcon>
                 <Image
-                  src="/assets/svg/home.svg"
+                  src="/assets/svg/product.svg"
                   alt="bars"
                   width="20px"
                   height="20px"
@@ -137,4 +138,4 @@ function UserLayout({ children }) {
   );
 }
 
-export default UserLayout;
+

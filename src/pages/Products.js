@@ -1,6 +1,7 @@
-import { Paper, Box, Button, Typography } from "@mui/material";
+import { Paper, Box, Button, Typography, IconButton } from "@mui/material";
 import React from "react";
 import Image from "next/image";
+
 import UserLayout from "../components/UserLayout.js";
 
 const style = {
@@ -12,22 +13,25 @@ const style = {
   paper2: {
     width: "300px",
     height: "290px",
-    marginLeft: "20px",
+    marginLeft: "40px",
     boxShadow: "0 5px 6px 1px blue",
   },
   box1: {
-    marginTop: "30px",
-    marginLeft: "80px",
+    marginTop: "100px",
+    marginLeft: "100px",
     marginRight: "50px",
     display: "flex",
     flexDirection: "row",
+    justifyContent: "center",
   },
   box2: {
     marginTop: "20px",
-    marginLeft: "80px",
+    marginLeft: "100px",
     marginRight: "50px",
     display: "flex",
     flexDirection: "row",
+    justifyContent: "center",
+    textAlign: "center",
   },
   Typography1: {
     marginTop: "12px",
@@ -39,9 +43,6 @@ const style = {
 export default function Products() {
   return (
     <Box sx={{ width: "100%", marginTop: "70px", height: "1500" }}>
-      <Typography variant="h2" sx={{ marginTop: "12px", textAlign: "center" }}>
-        Products
-      </Typography>
       <Box sx={style.box1}>
         <Paper variant="outlined" sx={style.paper1}>
           <Image
@@ -53,6 +54,17 @@ export default function Products() {
           <Typography sx={{ textAlign: "center" }}>
             Marche Slide kanye west for women
           </Typography>
+          <IconButton sx={{ marginLeft: "55px" }}>
+            <Image
+              src="/assets/cart.svg"
+              alt="cart"
+              width="30px"
+              height="30px"
+            />
+            <Typography variant="h6" marginLeft="12px">
+              Add to Cart
+            </Typography>
+          </IconButton>
         </Paper>
 
         <Paper variant="outlined" sx={style.paper2}>
@@ -65,6 +77,17 @@ export default function Products() {
           <Typography sx={{ textAlign: "center" }}>
             Adidas Adilette slide -white
           </Typography>
+          <IconButton sx={{ marginLeft: "55px" }}>
+            <Image
+              src="/assets/cart.svg"
+              alt="cart"
+              width="30px"
+              height="30px"
+            />
+            <Typography variant="h6" marginLeft="12px">
+              Add to Cart
+            </Typography>
+          </IconButton>
         </Paper>
 
         <Paper variant="outlined" sx={style.paper2}>
@@ -77,9 +100,17 @@ export default function Products() {
           <Typography sx={{ textAlign: "center" }}>
             Beach walk- Black
           </Typography>
-          <Typography sx={{ textAlign: "center" }}>
-            Beach walk- Black
-          </Typography>
+          <IconButton sx={{ marginLeft: "55px" }}>
+            <Image
+              src="/assets/cart.svg"
+              alt="cart"
+              width="30px"
+              height="30px"
+            />
+            <Typography variant="h6" marginLeft="12px">
+              Add to Cart
+            </Typography>
+          </IconButton>
         </Paper>
 
         <Paper variant="outlined" sx={style.paper2}>
@@ -92,6 +123,17 @@ export default function Products() {
           <Typography sx={{ textAlign: "center" }}>
             Berkinstock for ladies- white
           </Typography>
+          <IconButton sx={{ marginLeft: "55px" }}>
+            <Image
+              src="/assets/cart.svg"
+              alt="cart"
+              width="30px"
+              height="30px"
+            />
+            <Typography variant="h6" marginLeft="12px">
+              Add to Cart
+            </Typography>
+          </IconButton>
         </Paper>
       </Box>
       <Box sx={style.box2}>
@@ -106,11 +148,22 @@ export default function Products() {
           <Typography sx={{ textAlign: "center" }}>
             Marche Slide kanye west for women
           </Typography>
+          <IconButton sx={{ marginLeft: "55px" }}>
+            <Image
+              src="/assets/cart.svg"
+              alt="cart"
+              width="30px"
+              height="30px"
+            />
+            <Typography variant="h6" marginLeft="12px">
+              Add to Cart
+            </Typography>
+          </IconButton>
         </Paper>
 
         <Paper variant="outlined" sx={style.paper2}>
           <Image
-            src="/Tsinelas9-edited.jpg.png"
+            src="/Tsinelas2-edited.jpg.png"
             alt="tsinelas"
             width={300}
             height={200}
@@ -118,11 +171,69 @@ export default function Products() {
           <Typography sx={{ textAlign: "center" }}>
             Adidas Adilette slide -white
           </Typography>
+          <IconButton sx={{ marginLeft: "55px" }}>
+            <Image
+              src="/assets/cart.svg"
+              alt="cart"
+              width="30px"
+              height="30px"
+            />
+            <Typography variant="h6" marginLeft="12px">
+              Add to Cart
+            </Typography>
+          </IconButton>
+        </Paper>
+
+        <Paper variant="outlined" sx={style.paper2}>
+          <Image
+            src="/Tsinelas1-edited.jpg.png"
+            alt="tsinelas"
+            width={300}
+            height={200}
+          />
+          <Typography sx={{ textAlign: "center" }}>
+            Adidas Adilette slide -white
+          </Typography>
+          <IconButton sx={{ marginLeft: "55px" }}>
+            <Image
+              src="/assets/cart.svg"
+              alt="cart"
+              width="30px"
+              height="30px"
+            />
+            <Typography variant="h6" marginLeft="12px">
+              Add to Cart
+            </Typography>
+          </IconButton>
+        </Paper>
+
+        <Paper variant="outlined" sx={style.paper2}>
+          <Image
+            src="/Tsinelas5-edited.jpg.png"
+            alt="tsinelas"
+            width={300}
+            height={200}
+          />
+          <Typography sx={{ textAlign: "center" }}>
+            Adidas Adilette slide -white
+          </Typography>
+          <IconButton sx={{ marginLeft: "55px" }}>
+            <Image
+              src="/assets/cart.svg"
+              alt="cart"
+              width="30px"
+              height="30px"
+            />
+            <Typography variant="h6" marginLeft="12px">
+              Add to Cart
+            </Typography>
+          </IconButton>
         </Paper>
       </Box>
     </Box>
   );
 }
+
 Products.getLayout = function getLayout(page) {
   return <UserLayout sx={{ marginTop: "100px" }}>{page}</UserLayout>;
 };

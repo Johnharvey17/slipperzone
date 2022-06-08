@@ -12,18 +12,19 @@ linkStyle: {
  function Register() {
     const router = useRouter();
     const gotoSignIn = ()=>{
-    router.push("/Signin")
+    router.push("/Signin2")
 }
   return (
     <Box 
-    sx={{width: "250vh", height:"80vh",
+    sx={{width: "80vw", height:"80vh",
     display:"flex", flexDirection: "column",
     justifyContent:"center",
     alignItems:"center"}}>
          <Typography variant="h4" fontFamily="Arial">Please Sign In</Typography>
         <Paper elevation={3}
         sx={{padding: "24px", display:"flex", 
-        flexDirection:"column",marginTop: "12px"
+        flexDirection:"column",marginTop: "12px",
+        width:"500px", height:"700"
         }}>
             <TextField label="Email Address" type="email"  sx={{marginTop: "12px"}}/>
             <TextField label="Password" type="password" sx={{marginTop: "12px"}}/>
