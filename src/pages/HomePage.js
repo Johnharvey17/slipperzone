@@ -1,6 +1,6 @@
 import React from 'react'
 import UserLayout from "../components/UserLayout"
-import Home3 from './Home3'
+
 export default function HomePage() {
   return (
     <div>HomePage
