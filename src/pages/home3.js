@@ -3,14 +3,14 @@ import React from "react";
 
 export default function Home3() {
   return (
-    <Box sx={{marginTop:"50px", width:"%"}}>
+    <Box sx={{ marginTop: "50px", width: "%" }}>
       <Paper
         sx={{
           display: "flex",
-          flexDirection: "row", 
+          flexDirection: "row",
           width: "250%",
           height: "250px",
-          position:"relative"
+          position: "relative",
         }}
       >
         <Avatar
@@ -23,56 +23,53 @@ export default function Home3() {
             marginLeft: "70px",
           }}
         ></Avatar>
-      
-          <Typography variant="h4" sx={{marginTop:"25px" ,marginLeft:"12px"}}>
-            Adidas
-          </Typography>
-          <Avatar
-          src="/adidas3.png"
-          alt="adidas"
-          sx={{
-            width: "220px",
-            height: "200px",
-            marginTop: "25px",
-            marginLeft: "20px",
-          }}
-        ></Avatar>
-      
-          <Typography variant="h4" sx={{marginTop:"25px" ,marginLeft:"12px"}}>
-            Adidas
-          </Typography>
-          <Avatar
-          src="/adidas3.png"
-          alt="adidas"
-          sx={{
-            width: "220px",
-            height: "200px",
-            marginTop: "25px",
-            marginLeft: "20px",
-          }}
-        ></Avatar>
-      
-          <Typography variant="h4" sx={{marginTop:"25px" ,marginLeft:"12px"}}>
-            Adidas
-       
-          </Typography>
-          <Avatar
-          src="/adidas3.png"
-          alt="adidas"
-          sx={{
-            width: "220px",
-            height: "200px",
-            marginTop: "25px",
-            marginLeft: "20px",
-          }}
-        ></Avatar>
-      
-          <Typography variant="h4" sx={{marginTop:"25px" ,marginLeft:"12px"}}>
 
-          </Typography>
-         
-         
-        
+        <Typography variant="h4" sx={{ marginTop: "25px", marginLeft: "12px" }}>
+          Adidas
+        </Typography>
+        <Avatar
+          src="/adidas3.png"
+          alt="adidas"
+          sx={{
+            width: "220px",
+            height: "200px",
+            marginTop: "25px",
+            marginLeft: "20px",
+          }}
+        ></Avatar>
+
+        <Typography variant="h4" sx={{ marginTop: "25px", marginLeft: "12px" }}>
+          Adidas
+        </Typography>
+        <Avatar
+          src="/adidas3.png"
+          alt="adidas"
+          sx={{
+            width: "220px",
+            height: "200px",
+            marginTop: "25px",
+            marginLeft: "20px",
+          }}
+        ></Avatar>
+
+        <Typography variant="h4" sx={{ marginTop: "25px", marginLeft: "12px" }}>
+          Adidas
+        </Typography>
+        <Avatar
+          src="/adidas3.png"
+          alt="adidas"
+          sx={{
+            width: "220px",
+            height: "200px",
+            marginTop: "25px",
+            marginLeft: "20px",
+          }}
+        ></Avatar>
+
+        <Typography
+          variant="h4"
+          sx={{ marginTop: "25px", marginLeft: "12px" }}
+        ></Typography>
       </Paper>
     </Box>
   );
