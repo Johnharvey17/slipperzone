@@ -1,6 +1,6 @@
 
 import { CssBaseline, ThemeProvider } from "@mui/material"
-import theme from "./theme"
+import theme from "./theme.css"
 
 function MyApp({ Component, pageProps }) {
 

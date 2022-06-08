@@ -1,7 +1,7 @@
 import { Paper, Box, Button, Typography } from "@mui/material";
 import React from "react";
 import Image from "next/image";
-import UserLayout from "../components/UserLayout";
+import UserLayout from "../components/UserLayout.js";
 
 const style = {
   paper1: {

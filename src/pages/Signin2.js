@@ -1,6 +1,6 @@
 import {  Box, Typography } from "@mui/material";
 import Image from "next/image";
-import Signin from "./Signin";
+import Signin from "./Signin.js";
 
 export default function Signin2() {
   return (

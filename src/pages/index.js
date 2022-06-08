@@ -1,6 +1,6 @@
 import {  Box } from "@mui/material";
 import Image from "next/image";
-import Signin from "./Signin";
+import Signin from "./Signin.js";
 
 export default function Home() {
   return (
