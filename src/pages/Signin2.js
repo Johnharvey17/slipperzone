@@ -2,7 +2,7 @@ import {  Box } from "@mui/material";
 import Image from "next/image";
 import Signin from "./Signin";
 
-export default function Home() {
+export default function Signin2() {
   return (
     <Box>
       <Box sx={{ display: "flex", flexDirection: "row" ,marginTop:"50px" ,marginLeft:"30px"}}>
