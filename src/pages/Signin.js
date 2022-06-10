@@ -76,9 +76,9 @@ export default function Signin() {
   return (
     <Box
       sx={{
-        width: "150vh",
+        width: "150vh", 
         height: "80vh",
-        display: "flex",
+        display: "block",
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
@@ -98,6 +98,7 @@ export default function Signin() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          position:"fix"
         }}>
 
         <TextField

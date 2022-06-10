@@ -79,7 +79,16 @@ export default function UserLayout({ children }) {
           }}
         >
           <List sx={{ flexGrow: 1 }}>
-            <ListItem button>
+          
+            <ListItem>
+            <ListItemIcon>
+                <Image
+                  src="/assets/svg/user.svg"
+                  alt="bars"
+                  width="50px"
+                  height="50px"
+                />
+              </ListItemIcon>
               <ListItemText primary="User" />
             </ListItem>
             <Divider />
@@ -131,6 +140,22 @@ export default function UserLayout({ children }) {
               </ListItemIcon>
               <ListItemText primary="Cart" />
             </ListItem>
+            <ListItem
+              button
+              onClick={() => gotoPage("/About")}
+              selected={router.pathname.includes("About Us")}
+            >
+              <ListItemIcon>
+                <Image
+                  src="/assets/svg/note.svg"
+                  alt="bars"
+                  width="20px"
+                  height="20px"
+                />
+              </ListItemIcon>
+              <ListItemText primary="About Us" />
+            </ListItem>
+
           </List>
 
           <Divider />
@@ -149,7 +174,10 @@ export default function UserLayout({ children }) {
           </List>
         </Box>
       </Drawer>
-      <Box>{children}</Box>
+      
+        <Box> 
+        {children}
+        </Box>
     </Box>
   );
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import {Box, Typography} from "@mui/material";
+import {Box, Typography,Paper} from "@mui/material";
 import UserLayout from "../components/UserLayout.js";
 function AddtoCart() {
   return (
@@ -18,11 +18,24 @@ function AddtoCart() {
         marginLeft: "10px", 
         fontFamily: "Impact Regular",
         fontSize:"35px" }}>
-      SLippersZone
+      Cart
     </Typography>
-    <Typography sx={{ marginLeft: "20px",fontFamily: "Diwani  Simple Outline 2 Regular",
-        fontSize:"25px" }}>Log in</Typography>
-  </Box></div>
+  </Box> 
+  <Box sx={{marginTop:"80px"}}> 
+  <Paper elevation={6} 
+      sx={{
+        marginTop:"50px",
+        marginLeft:"70px",
+        marginRight:"50px", 
+        width:"1300px",
+        height:"400px"}}>
+            <Typography     >
+                No products yet
+            </Typography>
+             </Paper>
+</Box> 
+      
+  </div>
   )
 }
 

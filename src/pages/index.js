@@ -20,6 +20,7 @@ export default function Home() {
           height: "80px",
           backgroundColor: "#E0DECA",
           alignItems: "center",
+          position:"fix"
         }}
       >
         <Typography 
@@ -47,15 +48,7 @@ export default function Home() {
           height={600}
         />
         <Signin />
-      </Box>
-
-      <Box
-        sx={{
-          backgroundColor: "#E0DECA",
-        }}
-      >
-        dad
-      </Box>
+      </Box>  
     </Box>
   );
 }
