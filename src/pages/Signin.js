@@ -16,6 +16,11 @@ const style = {
     cursor: "pointer",
     color: "#0818a6",
   },
+  typography:{
+    fontFamily:"Arial",
+    fontSize:"30px"
+
+  },
 };
 
 export default function Signin() {
@@ -80,9 +85,7 @@ export default function Signin() {
       }}
     >
       <Typography
-        sx={{ fontFamily:"Arial",
-        fontSize:"30px"
-        }}>
+        sx={style.typography}>
         Please Sign In
       </Typography>
       <Paper

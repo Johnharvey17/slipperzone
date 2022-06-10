@@ -115,6 +115,22 @@ export default function UserLayout({ children }) {
               </ListItemIcon>
               <ListItemText primary="Products" />
             </ListItem>
+
+            <ListItem
+              button
+              onClick={() => gotoPage("/AddtoCart")}
+              selected={router.pathname.includes("AddtoCart")}
+            >
+              <ListItemIcon>
+                <Image
+                  src="/assets/svg/addtocart.svg"
+                  alt="bars"
+                  width="20px"
+                  height="20px"
+                />
+              </ListItemIcon>
+              <ListItemText primary="Cart" />
+            </ListItem>
           </List>
 
           <Divider />

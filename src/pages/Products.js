@@ -1,23 +1,25 @@
 import { Paper, Box, Button, Typography, IconButton } from "@mui/material";
 import React from "react";
 import Image from "next/image";
-
 import UserLayout from "../components/UserLayout.js";
+import {useRouter} from "next/router"
 
 const style = {
   paper1: {
     width: "300px",
-    height: "290px",
+    height: "340px",
     boxShadow: "0 5px 6px 1px blue",
+    marginTop:"30px"
   },
   paper2: {
     width: "300px",
-    height: "290px",
+    height: "340px",
     marginLeft: "40px",
     boxShadow: "0 5px 6px 1px blue",
+    marginTop:"30px"
   },
   box1: {
-    marginTop: "100px",
+   
     marginLeft: "100px",
     marginRight: "50px",
     display: "flex",
@@ -38,25 +40,82 @@ const style = {
     textAlign: "center",
     fontFamily: "",
   },
+  typho:{
+    textAlign: "center",
+    fontFamily:"Gill sans",
+    fontSize: "20px"
+
+  },
 };
 
 export default function Products() {
+const router=useRouter();
+
+const gotoProduct1 =() =>{
+router.push("/Product1")
+};
+const gotoProduct2 =() =>{
+  router.push("/Product2")
+  };
+  const gotoProduct3 =() =>{
+    router.push("/Product3")
+    };
+    const gotoProduct4 =() =>{
+      router.push("/Product4")
+      };
+      const gotoProduct5 =() =>{
+        router.push("/Product5")
+        };
+        const gotoProduct6 =() =>{
+          router.push("/Product6")
+          };
+          const gotoProduct7 =() =>{
+            router.push("/Product7")
+            };
+            const gotoProduct8 =() =>{
+              router.push("/Product8")
+              };
+
+
   return (
-    <Box sx={{ width: "100%", marginTop: "70px", height: "1500" }}>
+    <Box sx={{height:"1200px"}}>
+    <Box
+        sx={{
+          marginTop:"70px",
+          display: "flex",
+          flexDirection: "row",
+          height: "80px",
+          backgroundColor: "#E0DECA",
+          alignItems: "center",
+        }}
+      >
+        <Typography 
+          sx={{ 
+            marginLeft: "10px", 
+            fontFamily: "Impact Regular",
+            fontSize:"35px" }}>
+          Shop Now
+        </Typography>
+        
+      </Box>
+    <Box sx={{ width: "100%",height:"900px", backgroundColor:"#FFFFFF" }}>
       <Box sx={style.box1}>
         <Paper variant="outlined" sx={style.paper1}>
           <Image
-            src="/Tsinelas8-edited.jpg.png"
+            src="/prodImages/Tsinelas8-edited.jpg.png"
             alt="tsinelas"
             width={300}
             height={200}
           />
-          <Typography sx={{ textAlign: "center" }}>
-            Marche Slide kanye west for women
+          <Typography sx={style.typho}>
+            Marche Slide kanye west 
           </Typography>
-          <IconButton sx={{ marginLeft: "55px" }}>
+          <Typography sx={style.typho}>
+          ₱1800
+          </Typography>
+          <IconButton sx={{ marginLeft: "55px" }} onClick={gotoProduct1}>
             <Image
-              src="/assets/cart.svg"
+              src="/assets/svg/addtocart.svg"
               alt="cart"
               width="30px"
               height="30px"
@@ -69,17 +128,20 @@ export default function Products() {
 
         <Paper variant="outlined" sx={style.paper2}>
           <Image
-            src="/Tsinelas9-edited.jpg.png"
+            src="/prodImages/Tsinelas9-edited.jpg.png"
             alt="tsinelas"
             width={300}
             height={200}
           />
-          <Typography sx={{ textAlign: "center" }}>
+          <Typography sx={style.typho}>
             Adidas Adilette slide -white
           </Typography>
-          <IconButton sx={{ marginLeft: "55px" }}>
+          <Typography sx={style.typho}>
+          ₱1600
+          </Typography>
+          <IconButton sx={{ marginLeft: "55px" }} onClick={gotoProduct2}>
             <Image
-              src="/assets/cart.svg"
+              src="/assets/svg/addtocart.svg"
               alt="cart"
               width="30px"
               height="30px"
@@ -92,17 +154,20 @@ export default function Products() {
 
         <Paper variant="outlined" sx={style.paper2}>
           <Image
-            src="/Tsinelas3-edited.jpg.png"
+            src="/prodImages/Tsinelas3-edited.jpg.png"
             alt="tsinelas"
             width={300}
             height={200}
           />
-          <Typography sx={{ textAlign: "center" }}>
+          <Typography sx={style.typho}>
             Beach walk- Black
           </Typography>
-          <IconButton sx={{ marginLeft: "55px" }}>
+          <Typography sx={style.typho}>
+          ₱160
+          </Typography>
+          <IconButton sx={{ marginLeft: "55px" }} onClick={gotoProduct3}>
             <Image
-              src="/assets/cart.svg"
+              src="/assets/svg/addtocart.svg"
               alt="cart"
               width="30px"
               height="30px"
@@ -113,19 +178,22 @@ export default function Products() {
           </IconButton>
         </Paper>
 
-        <Paper variant="outlined" sx={style.paper2}>
+        <Paper variant="outlined" sx={style.paper2} onClick={gotoProduct4}>
           <Image
-            src="/Tsinelas6-edited.jpg.png"
+            src="/prodImages/Tsinelas6-edited.jpg.png"
             alt="berkinstock"
             width={300}
             height={200}
           />
-          <Typography sx={{ textAlign: "center" }}>
+          <Typography sx={style.typho}>
             Berkinstock for ladies- white
           </Typography>
-          <IconButton sx={{ marginLeft: "55px" }}>
+          <Typography sx={style.typho}>
+          ₱2500
+          </Typography>
+          <IconButton sx={{ marginLeft: "55px" }} onClick={gotoProduct5}>
             <Image
-              src="/assets/cart.svg"
+              src="/assets/svg/addtocart.svg"
               alt="cart"
               width="30px"
               height="30px"
@@ -139,18 +207,21 @@ export default function Products() {
       <Box sx={style.box2}>
         <Paper variant="outlined" sx={style.paper1}>
           <Image
-            src="/Tsinelas10.png"
+            src="/prodImages/Tsinelas10.png"
             alt="tsinelas"
             width={250}
             height={200}
             objectPosition="center"
           />
-          <Typography sx={{ textAlign: "center" }}>
-            Marche Slide kanye west for women
+          <Typography sx={style.typho}>
+            Adidas Adillet Slide Black
           </Typography>
-          <IconButton sx={{ marginLeft: "55px" }}>
+          <Typography sx={style.typho}>
+          ₱1600
+          </Typography>
+          <IconButton sx={{ marginLeft: "55px" }} onClick={gotoProduct6}>
             <Image
-              src="/assets/cart.svg"
+              src="/assets/svg/addtocart.svg"
               alt="cart"
               width="30px"
               height="30px"
@@ -163,17 +234,20 @@ export default function Products() {
 
         <Paper variant="outlined" sx={style.paper2}>
           <Image
-            src="/Tsinelas2-edited.jpg.png"
+            src="/prodImages/Tsinelas2-edited.jpg.png"
             alt="tsinelas"
             width={300}
             height={200}
           />
-          <Typography sx={{ textAlign: "center" }}>
-            Adidas Adilette slide -white
+          <Typography sx={style.typho}>
+            Beach walk
           </Typography>
-          <IconButton sx={{ marginLeft: "55px" }}>
+          <Typography sx={style.typho}>
+          ₱150
+          </Typography>
+          <IconButton sx={{ marginLeft: "55px" }} onClick={gotoProduct7}>
             <Image
-              src="/assets/cart.svg"
+              src="/assets/svg/addtocart.svg"
               alt="cart"
               width="30px"
               height="30px"
@@ -186,17 +260,20 @@ export default function Products() {
 
         <Paper variant="outlined" sx={style.paper2}>
           <Image
-            src="/Tsinelas1-edited.jpg.png"
+            src="/prodImages/Tsinelas1-edited.jpg.png"
             alt="tsinelas"
             width={300}
             height={200}
           />
-          <Typography sx={{ textAlign: "center" }}>
-            Adidas Adilette slide -white
+          <Typography sx={style.typho}>
+            Islander sandals -Dark Blue
           </Typography>
-          <IconButton sx={{ marginLeft: "55px" }}>
+          <Typography sx={style.typho}>
+          ₱400
+          </Typography>
+          <IconButton sx={{ marginLeft: "55px" }} onClick={gotoProduct8}>
             <Image
-              src="/assets/cart.svg"
+              src="/assets/svg/addtocart.svg"
               alt="cart"
               width="30px"
               height="30px"
@@ -209,17 +286,20 @@ export default function Products() {
 
         <Paper variant="outlined" sx={style.paper2}>
           <Image
-            src="/Tsinelas5-edited.jpg.png"
+            src="/prodImages/Tsinelas5-edited.jpg.png"
             alt="tsinelas"
             width={300}
             height={200}
           />
-          <Typography sx={{ textAlign: "center" }}>
-            Adidas Adilette slide -white
+          <Typography sx={style.typho}>
+            Birkenstock -white
           </Typography>
-          <IconButton sx={{ marginLeft: "55px" }}>
+          <Typography sx={style.typho}>
+          ₱2500
+          </Typography>
+          <IconButton sx={{ marginLeft: "1px" }} onClick={gotoProduct8}>
             <Image
-              src="/assets/cart.svg"
+              src="/assets/svg/addtocart.svg"
               alt="cart"
               width="30px"
               height="30px"
@@ -230,6 +310,7 @@ export default function Products() {
           </IconButton>
         </Paper>
       </Box>
+    </Box>
     </Box>
   );
 }
